@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+  padding: 100px;
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+
+.wheel {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #FCE38A;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 2s cubic-bezier(0.17, 0.67, 0.53, 1.53);
+}
+
+.wheel.spinning {
+  animation: spin 2s cubic-bezier(0.17, 0.67, 0.53, 1.53) forwards;
+}
+
+.inner-wheel {
+  width: 90%;
+  height: 90%;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-wheel p {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #FFC34D;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
